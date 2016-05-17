@@ -1,0 +1,3 @@
+== README
+
+Wedding website for Sam and Andrea
