@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'schedule', to: 'welcome#schedule'
   get 'get_here', to: 'welcome#get_here'
   get 'stay', to: 'welcome#stay'
+  get 'todo', to: 'welcome#todo'
   
 
   # Example of regular route:

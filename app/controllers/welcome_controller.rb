@@ -12,4 +12,7 @@ class WelcomeController < ApplicationController
     def stay
     end
     
+    def todo
+    end
+    
 end
