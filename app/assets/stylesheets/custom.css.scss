@@ -39,11 +39,20 @@ body {
 .jumbotron-submain {
     font-family: "CopaseticNF";
     background: #141414;
-    width: 50%;
+    width: 60%;
     color: #FCFBE3;
     font-weight: bold;
     border-style: groove;
     border-color: #FCFBE3;
+}
+
+.jumbotron-farms {
+    position: relative;
+    background: #000 image-url("farmhouses.jpg") center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
 }
 
 .main-title {
@@ -79,17 +88,8 @@ a {
 }
 
 a:hover {
+    text-decoration: none;
     font-weight: bold;
-    text-decoration: none; 
-}
-
-.jumbotron-farms {
-    position: relative;
-    background: #000 image-url("farmhouses.jpg") center center;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    overflow: hidden;
 }
 
 .map {
@@ -111,6 +111,12 @@ a:hover {
 // USE MEDIA QUERIES FOR THIS ONE!
 .narrow {
     width: 65%;
+}
+
+@media (max-width: 767px) {
+    .narrow {
+        width: 100%;
+    }
 }
 
 .underline {
