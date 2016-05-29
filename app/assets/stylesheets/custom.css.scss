@@ -13,10 +13,24 @@
     src: asset-url('bettynoir.ttf') format("truetype");
 }
 
+@font-face {
+    font-family: "Fog02";
+    src: asset-url('FoglihtenDeH02.otf') format("truetype")
+}
+
+@font-face {
+    font-family: "Fog04";
+    src: asset-url('FoglihtenDeH04.otf') format("truetype")
+}
+
+@font-face {
+    font-family: "Chess";
+    src: asset-url('ChessAlpha2.ttf') format("truetype")
+}
+
 body {
-    // background: image-url("brattmap3.jpg");
     background: image-url("bratt_topo.jpg");
-    background-position: center; 
+    background-position: center;
     width:100%;
     height:1000px;
 }
@@ -58,6 +72,21 @@ body {
 .main-title {
     font-weight: bold;
     color: #FAEBD7;
+}
+
+.fog02 {
+    font-family: "Fog02";
+    font-size: 1.5em;
+}
+
+.fog04 {
+    font-family: "Fog04";
+    font-size: 1.5em;
+}
+
+.chess {
+    font-family: "Chess";
+    font-size: 1.3em;
 }
 
 .white {
@@ -140,13 +169,13 @@ a:hover {
 }
 /* title */
 .navbar-default .navbar-brand {
-
     color: #FCFBE3;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
     background-color: #141414;
     color: #D3D3D3;
+    border-color: #D3D3D3;
 }
 /* link */
 .navbar-default .navbar-nav > li > a {
@@ -156,6 +185,7 @@ a:hover {
 .navbar-default .navbar-nav > li > a:focus {
     background-color: #141414;
     color: #D3D3D3;
+    border-color: #D3D3D3;
     font-weight: bold;
 }
 .navbar-default .navbar-nav > .active > a, 
@@ -163,6 +193,7 @@ a:hover {
 .navbar-default .navbar-nav > .active > a:focus {
     background-color: #141414;
     color: #D3D3D3;
+    border-color: #D3D3D3;
     font-weight: bold;
 }
 .navbar-default .navbar-nav > .open > a, 
@@ -171,6 +202,7 @@ a:hover {
     background-color: #141414;
     color: #D3D3D3;
     font-weight: bold;
+    border-color: #D3D3D3;
 }
 /* caret */
 // .navbar-default .navbar-nav > .dropdown > a .caret {
@@ -191,27 +223,18 @@ a:hover {
 
 /* mobile version */
 .navbar-default .navbar-toggle {
-    background-color: #FCFBE3;
+    background-color: #141414;
     color: #141414;
+    border-color: #141414;
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #141414;
+    background-color: #FCFBE3;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #141414;
+    background-color: #D3D3D3;
     .icon-bar {
-        background-color: #D3D3D3;
+        background-color: #141414;
     }
 }
 
-// @media (max-width: 767px) {
-//     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-//         color: #FCFBE3;
-//     }
-//     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-//     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-//         color: #D3D3D3;
-//         font-weight: bold;
-//     }
-// }
