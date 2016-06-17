@@ -1,62 +1,44 @@
 <body id = "page-index">
 
     <div class="jumbotron jumbotron-main">
-        <h1 align="center">Sam & Andrea's Spectacular Extravaganza Funtime Hootenanny</h1>
+        <!--<h1 align="center">Sam & Andrea's Spectacular Extravaganza Funtime Hootenanny</h1>-->
+        <h1 align="center">Sam & Andrea</h1>
+        <h2 align="center">October 8th, 2016</h2>
+        <h2 align="center">Brattleboro, VT</h2>
+        
+        
     </div>
     
     <div class="container container-border white round">
-        <h2 align="center">Welcome!</h2>
-        <%= image_tag("samdrea-cape.png", :alt => "samdrea", :align => "left", :class => "hotel-img img-responsive") %>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
+        <div class="container">
+            <h2 align="center">Welcome!</h2><br>
+            <%= image_tag("samdrea-cape.png", :alt => "samdrea", :align => "left", :class => "hotel-img img-responsive right-padding") %>
+            <br><p>Hello friends and loved ones! Welcome to Andrea and Sam's wedding website. 
+            We're already married and we'd like to celebrate with all of you! We hope that 
+            you can join us in Brattleboro, Vermont for our wedding reception on October 8th, 2016.</p><br>
+            <p>We were wed November 2015 in Cape Cod by Sam's father, Ron Bruno, who is no longer with us. 
+            Ron was a spirited dancer and a believer of self-made tradition. He will be smiling from above! </p><br>
+            <p>Check out the information provided here for accomodations, the weekend schedule, places to eat,
+            and things to do nearby. Don't hesitate to reach out if you have any questions. Can't wait to see you!</p><br>
+        </div>
+        <br>
+        <hr>
+        <div class="container">
+            <ul>
+                <li>
+                    <h3 align="center"><span class="fog02">} </span><%= link_to 'Accommodations', stay_path %><span class="fog02"> {</span></h3>
+                </li>
+                <li>
+                    <h3 align="center"><span class="fog02">} </span><%= link_to 'Weekend Schedule', schedule_path %><span class="fog02"> {</span></h3>
+                </li>
+                <li>
+                    <h3 align="center"><span class="fog02">} </span><%= link_to 'Things to Do', todo_path %><span class="fog02"> {</span></h3>
+                </li>
+                <li>
+                    <h3 align="center"><span class="fog02">} </span><%= link_to 'Registry', registry_path %><span class="fog02"> {</span></h3>
+                </li>
+            </ul>
+        </div>
+    </div> <!-- /container-border white round -->
     
-    <div class="container container-border white round">
-        <ul>
-            <div class="container">
-                <li>
-                    <h2 align="center">
-                        <span class="fog02">} </span><%= link_to 'Where to Stay', stay_path %><span class="fog02"> {</span>  
-                    </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </li>
-            </div>
-            <div class="container">
-                <li>
-                    <h2 align="center">
-                        <span class="fog02">} </span>  <%= link_to 'Things to Do', todo_path %><span class="fog02"> {</span>  
-                    </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </li>
-            </div>
-            <div class="container">
-                <li>
-                    <h2 align="center">
-                        <span class="fog02">} </span><%= link_to 'Weekend Schedule', schedule_path %><span class="fog02"> {</span>  
-                    </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </li>
-            </div>
-        </ul>
-    </div>
-
 </body>

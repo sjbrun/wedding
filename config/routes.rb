@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'get_here', to: 'welcome#get_here'
   get 'stay', to: 'welcome#stay'
   get 'todo', to: 'welcome#todo'
+  get 'registry', to: 'welcome#registry'
   
   ## RSVP routes
   get :sign_in, :controller => :session, :action => :index

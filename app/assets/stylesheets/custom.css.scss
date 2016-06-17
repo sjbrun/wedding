@@ -64,6 +64,12 @@
     height:1000px;
 }
 
+#page-registry {
+    background: image-url("under-construction.jpg");
+    background-position: center;
+    width:100%;
+}
+
 .jumbotron-main {
     font-family: "CopaseticNF", "sans-serif";
     background: #141414;
@@ -196,6 +202,10 @@ hr {
     background-color: #333; /* Modern Browsers */
 }
 
+p {
+    font-size: 1.3em;
+}
+
 .blurb {
     font-size: 1.3em;
 }
@@ -206,6 +216,10 @@ hr {
 
 .right-padding {
     padding-right: 3em;
+}
+
+.bottom-margin {
+    margin-bottom: 20px;
 }
 
 .underline {
