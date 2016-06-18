@@ -90,7 +90,7 @@
 .jumbotron-submain {
     font-family: "CopaseticNF";
     background: #141414;
-    width: 60%;
+    width: 75%;
     color: #FCFBE3;
     font-weight: bold;
     border-style: groove;
@@ -187,6 +187,9 @@ a:hover {
 
 @media (max-width: 40em) {
     .hotel-img {
+        display: none;
+    }
+    .fog02 {
         display: none;
     }
 }
