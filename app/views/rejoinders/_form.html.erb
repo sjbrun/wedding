@@ -1,0 +1,65 @@
+<br>
+<%= render "shared/errors", obj: @rsvp %>
+<br>
+
+<div class="row">
+  <div class='col-sm-12'>
+    <%= form_for(@rsvp, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label "Your name(s)" %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :names, class: "form-control", placeholder: 'List names of your party, e.g.- "Jane Doe, John Doe, etc."', autofocus: true %>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :number %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.select :number, options_for_select(0..10) %>
+        </div>
+      </div>
+      
+      <fieldset class="form-group">
+        
+        <!--<h4>Will your party be attending?</h4>-->
+        <div class="control-label col-sm-1 col-sm-offset-1">
+          <%= f.label :yes, "Yes", class: "form-check-label" %>
+        </div>
+        <div class="radio col-sm-1">
+          <%= f.radio_button :yes, "1" %>
+        </div>
+        <div class="control-label col-sm-1">
+          <%= f.label :yes, "No", class: "form-check-label" %>
+        </div>
+        <div class="radio col-sm-1">
+          <%= f.radio_button :yes, "0" %>
+        </div>
+      
+      </fieldset>
+      
+      <br>
+      
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :msg %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_area :msg , rows: 10, class: "form-control", placeholder: "Message to nuptials (optional)", autofocus: true %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div align="center" class="col-xs-4 col-xs-offset-4">
+          <%= f.submit "Submit RSVP", class: 'btn btn-primary btn-lg' %>
+        </div>
+      </div>
+    <% end %>
+    <div align="center" class="col-xs-4 col-xs-offset-4">
+      [ <%= link_to "Cancel RSVP and return to homepage", root_path %> ]
+    </div>
+  </div>
+</div>
