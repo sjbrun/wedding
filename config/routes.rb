@@ -12,18 +12,18 @@ Rails.application.routes.draw do
   get 'registry', to: 'welcome#registry'
   
   ## my RSVP routes
-  resources :rejoinders, except: [:show, :update, :delete]
+  # resources :rejoinders, except: [:show, :update, :delete]
   
-  ## RSVP routes from ricard gem
-  get :sign_in, :controller => :session, :action => :index
-  post :sign_in, :controller => :session, :action => :create
-  get :sign_out, :controller => :session, :action => :destroy
-  resources :response, :only => [:index, :create] do
-    collection do
-      get :overview, :action => :show, :as => :show
-      get :confirmation, :action => :confirmation
-    end
-  end
+  # ## RSVP routes from ricard gem
+  # get :sign_in, :controller => :session, :action => :index
+  # post :sign_in, :controller => :session, :action => :create
+  # get :sign_out, :controller => :session, :action => :destroy
+  # resources :response, :only => [:index, :create] do
+  #   collection do
+  #     get :overview, :action => :show, :as => :show
+  #     get :confirmation, :action => :confirmation
+  #   end
+  # end
 
 
   # Example of regular route:
