@@ -1,3 +1,26 @@
 <h1 align="center" class="jumbotron">RSVP List</h1>
 
+<div align="center">
+  <ul align="left" class="list-group bigger">
+    <li class="list-group-item active">
+      <strong>Total Attending: </strong>
+      <%= @total %>
+    </li>
+    
+    <li class="list-group-item list-group-item-info">
+      <strong>Friday: </strong>
+      <%= @fri %>
+    </li>
+    <li class="list-group-item list-group-item-info">
+      <strong>Saturday: </strong>
+      <%= @sat %>
+    </li>
+    <li class="list-group-item list-group-item-info">
+      <strong>Sunday: </strong>
+      <%= @sun %>
+    </li>
+  </ul>
+</div>
+
+
 <%= render 'rejoinder', obj: @rsvps %>

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'registry', to: 'welcome#registry'
   
   ## my RSVP routes
-  resources :rejoinders
+  resources :rejoinders, except: [:show, :update, :delete]
   
   ## RSVP routes from ricard gem
   # get :sign_in, :controller => :session, :action => :index

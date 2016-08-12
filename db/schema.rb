@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160810210318) do
+ActiveRecord::Schema.define(version: 20160811120812) do
 
   create_table "rejoinders", force: :cascade do |t|
     t.string   "names"
@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(version: 20160810210318) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean  "no"
+    t.boolean  "saturday"
+    t.boolean  "sunday"
+    t.boolean  "friday"
   end
 
   create_table "rsvp_access_attempts", force: :cascade do |t|

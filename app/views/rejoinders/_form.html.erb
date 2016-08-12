@@ -1,65 +1,68 @@
 <br>
 <%= render "shared/errors", obj: @rsvp %>
-<br>
 
-<div class="row">
-  <div class='col-sm-12'>
+<div class="col-sm-12">
+  <div class="row">
+  
     <%= form_for(@rsvp, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+  
+      <h3 align="center"><strong>Will your party be attending?</strong></h3>
+      <div align="center" class="row bigger" data-toggle="buttons-radio">
+        <%= f.radio_button :yes, "1", :id=>"yes", :checked => false, class: "form-check-input" %>
+        <label for="yes" class="form-check-inline"> Yes</label>
+        <%= f.radio_button :yes, "0", :id=>"no", :checked => false, class: "form-check-input" %>
+        <label for="no" class="form-check-inline"> No</label>
+      </div>
+  
+      <hr>
+      
       <div class="form-group">
-        <div class="control-label col-sm-2">
-          <%= f.label "Your name(s)" %>
-        </div>
+        <%= f.label "Your name(s)", class: "control-label col-sm-2" %>
         <div class="col-sm-8">
           <%= f.text_field :names, class: "form-control", placeholder: 'List names of your party, e.g.- "Jane Doe, John Doe, etc."', autofocus: true %>
         </div>
       </div>
       
       <div class="form-group">
-        <div class="control-label col-sm-2">
-          <%= f.label :number %>
-        </div>
+        <%= f.label :number, "# of Guests", class: "control-label col-md-2" %>
         <div class="col-sm-8">
-          <%= f.select :number, options_for_select(0..10) %>
+          <%= f.select :number, options_for_select(0..10), {}, {class: "form-control"} %>
         </div>
       </div>
       
-      <fieldset class="form-group">
-        
-        <!--<h4>Will your party be attending?</h4>-->
-        <div class="control-label col-sm-1 col-sm-offset-1">
-          <%= f.label :yes, "Yes", class: "form-check-label" %>
+      <h5 class="col-sm-offset-1"><strong>What day(s) will you attend?</strong></h5>
+      <div class="form-group">
+        <div class="form-check col-sm-offset-2">
+          <label class="form-check-label"><%= f.check_box :friday, class: "form-check-input day-checkbox" %>Friday (casual drinks)</label>
+        </div>      
+       
+        <div class="form-check col-sm-offset-2">
+          <label class="form-check-label"><%= f.check_box :saturday, class: "form-check-input day-checkbox" %>Saturday (reception)</label>
         </div>
-        <div class="radio col-sm-1">
-          <%= f.radio_button :yes, "1" %>
+  
+        <div class="form-check col-sm-offset-2">
+          <label class="form-check-label"><%= f.check_box :sunday, class: "form-check-input day-checkbox" %>Sunday (backyard barbecue)</label>
         </div>
-        <div class="control-label col-sm-1">
-          <%= f.label :yes, "No", class: "form-check-label" %>
-        </div>
-        <div class="radio col-sm-1">
-          <%= f.radio_button :yes, "0" %>
-        </div>
-      
-      </fieldset>
+      </div>
       
       <br>
       
       <div class="form-group">
-        <div class="control-label col-sm-2">
-          <%= f.label :msg %>
-        </div>
+        <%= f.label :msg, class:"control-label col-sm-2" %>
         <div class="col-sm-8">
-          <%= f.text_area :msg , rows: 10, class: "form-control", placeholder: "Message to nuptials (optional)", autofocus: true %>
+          <%= f.text_area :msg , rows: 10, class: "form-control", placeholder: "Message to the nuptials (optional)", autofocus: true %>
         </div>
       </div>
-
+  
       <div class="form-group">
         <div align="center" class="col-xs-4 col-xs-offset-4">
           <%= f.submit "Submit RSVP", class: 'btn btn-primary btn-lg' %>
         </div>
       </div>
     <% end %>
-    <div align="center" class="col-xs-4 col-xs-offset-4">
+    
+    <div align="center" class="col-xs-4 col-xs-offset-4 cancel-link">
       [ <%= link_to "Cancel RSVP and return to homepage", root_path %> ]
     </div>
-  </div>
-</div>
+  </div><!--/row-->
+</div> <!--/col-sm-12-->

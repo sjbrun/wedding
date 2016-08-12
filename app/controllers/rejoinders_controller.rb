@@ -1,11 +1,11 @@
 class RejoindersController < ApplicationController
   ### Convention methods order ==> Index, Show, New, Edit, Create, Update, Destroy
+  include RejoindersHelper
 
   def index
     @rsvps = Rejoinder.all
-  end
-  
-  def show
+    @total = total_attending(@rsvps)
+    @fri, @sat, @sun = tally(@rsvps)
   end
   
   def new
@@ -32,7 +32,7 @@ class RejoindersController < ApplicationController
   private  ## private functions
 
   def rejoinder_params
-    params.require(:rejoinder).permit(:names, :number, :yes, :no, :msg)
+    params.require(:rejoinder).permit(:names, :number, :yes, :no, :msg, :friday, :saturday, :sunday)
   end
 
 end

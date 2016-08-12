@@ -238,8 +238,61 @@ p {
     font-family: "arial";
     font-size: 1.1em;
     padding-top: 1cm;
-    
 }
+
+.rsvp-td > td {
+    text-align: left;
+}
+
+#rsvp-center {
+    text-align: center;
+}
+
+.bigger {
+    font-size: 1.5em;
+}
+
+label.required:after {
+    content: " *";
+    color: red;
+}
+
+.msg {
+    font-size: 0.8em;
+}
+
+.cancel-link {
+    padding-bottom: 2cm;
+}
+
+// CUSTOM RSVP BUTTON
+.custom-button {
+    background-color: #FCFBE3;
+    border: none;
+    color: FCFBE3;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.7s; /* Safari */
+    transition-duration: 0.7s;
+    cursor: pointer;
+}
+
+.rsvp-button {
+    background-color: #FFFF99;
+    color: #141414;
+    border: 2px solid #FCFBE3;
+}
+
+.rsvp-button:hover {
+    background-color: #adb7c1;
+    color: #141414;
+    border: 2px solid #FCFBE3;
+}
+
 
 // MEDIA QUERIES
 
