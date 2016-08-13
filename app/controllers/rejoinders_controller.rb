@@ -8,6 +8,10 @@ class RejoindersController < ApplicationController
     @fri, @sat, @sun = tally(@rsvps)
   end
   
+  def show
+    @rsvp = Rejoinder.find(params[:id])
+  end
+  
   def new
     @rsvp = Rejoinder.new
   end
@@ -19,7 +23,7 @@ class RejoindersController < ApplicationController
     @rsvp = Rejoinder.new(rejoinder_params)
     if @rsvp.save
       flash[:success] = "Thank you for the RSVP!"
-      redirect_to root_path
+      redirect_to rejoinder_path(@rsvp)
     else
       flash[:danger] = "Something went wrong"
       render 'new'

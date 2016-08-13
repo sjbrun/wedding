@@ -1,3 +1,5 @@
+window.onload = function(){ 
+
 function addClass(element, classname) {
   if (!element.className.includes(classname)) {
     element.classList.add(classname);
@@ -46,7 +48,8 @@ function noClick() {
 }
 
 // DOCUMENT LOAD PUT ALL FUNCTIONS IN HERE
-document.addEventListener("DOMContentLoaded", function(event) { 
   noClick();
   yesClick();
-});
+
+};
+
