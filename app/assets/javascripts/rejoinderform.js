@@ -1,4 +1,6 @@
-window.onload = function(){ 
+// window.onload = function(){ 
+var ready;
+ready = function() {
 
 function addClass(element, classname) {
   if (!element.className.includes(classname)) {
@@ -53,3 +55,5 @@ function noClick() {
 
 };
 
+$(document).ready(ready);
+$(document).on('page:load', ready);

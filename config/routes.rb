@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'stay', to: 'welcome#stay'
   get 'todo', to: 'welcome#todo'
   get 'registry', to: 'welcome#registry'
+  get 'testjs', to: 'welcome#testjs'
   
   ## my RSVP routes
   resources :rejoinders, only: [:index, :show, :new, :create]
