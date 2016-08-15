@@ -1,6 +1,7 @@
 class RejoindersController < ApplicationController
   ### Convention methods order ==> Index, Show, New, Edit, Create, Update, Destroy
   include RejoindersHelper
+  before_action :require_admin, only: [:index]
 
   def index
     @rsvps = Rejoinder.all
@@ -37,6 +38,13 @@ class RejoindersController < ApplicationController
 
   def rejoinder_params
     params.require(:rejoinder).permit(:names, :number, :yes, :no, :msg, :friday, :saturday, :sunday)
+  end
+  
+  def require_admin
+    unless current_user.try(:admin?)
+      flash[:error] = "You must be admin to access this section"
+      redirect_to root_path
+    end
   end
 
 end
