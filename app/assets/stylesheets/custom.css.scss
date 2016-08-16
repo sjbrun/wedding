@@ -241,8 +241,15 @@ p {
     padding-top: 1cm;
 }
 
-.rsvp-td > td {
+.rsvp-td-yes > td {
     text-align: left;
+    background-color: #fdfd96;
+}
+
+.rsvp-td-no > td {
+    text-align: left;
+    background-color: #C34A47;
+    
 }
 
 #rsvp-center {

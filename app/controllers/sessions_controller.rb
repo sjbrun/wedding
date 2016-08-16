@@ -6,7 +6,11 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:username], params[:password])
     if user
       session[:user_id] = user.id
-      redirect_to log_in_path, :notice => "Logged in!"
+      if user.admin?
+        redirect_to rejoinders_path
+      else
+        redirect_to log_in_path, :notice => "Logged in!"
+      end
     else
       flash[:error] = "Invalid username or password"
       render "new"

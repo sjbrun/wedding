@@ -13,18 +13,22 @@
   </thead>
   <tbody class>
   <% obj.each do |rsvp| %>
-    <tr class="rsvp-td">
-      <td id="rsvp-center"><%= 'X' if rsvp.yes %></td>
-      <td id="rsvp-center"><%= 'X' if !rsvp.yes %></td>
-      <td><%= rsvp.names %></td>
-      <td><%= rsvp.number %></td>
-      <td>
-        <%= " Fri " if rsvp.friday %>
-        <%= " Sat" if rsvp.saturday %>
-        <%= " Sun" if rsvp.sunday %>
-      </td>
-      <td class="msg"><%= rsvp.msg if rsvp.msg %></td>
-    </tr>
+    <% if rsvp.yes? %>
+      <tr class="rsvp-td-yes">
+    <% else %>
+      <tr class="rsvp-td-no">
+    <% end %>
+        <td id="rsvp-center"><%= 'X' if rsvp.yes %></td>
+        <td id="rsvp-center"><%= 'X' if !rsvp.yes %></td>
+        <td><%= rsvp.names %></td>
+        <td><%= rsvp.number %></td>
+        <td>
+          <%= " Fri " if rsvp.friday %>
+          <%= " Sat" if rsvp.saturday %>
+          <%= " Sun" if rsvp.sunday %>
+        </td>
+        <td class="msg"><%= rsvp.msg if rsvp.msg %></td>
+      </tr>
   <% end %>
   </tbody>
 </table>
