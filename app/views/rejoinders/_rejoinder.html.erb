@@ -11,7 +11,7 @@
       <th>Message</th>
     </tr>
   </thead>
-  <tbody class>
+  <tbody>
   <% obj.each do |rsvp| %>
     <% if rsvp.yes? %>
       <tr class="rsvp-td-yes">
@@ -20,9 +20,9 @@
     <% end %>
         <td id="rsvp-center"><%= 'X' if rsvp.yes %></td>
         <td id="rsvp-center"><%= 'X' if !rsvp.yes %></td>
-        <td><%= rsvp.names %></td>
-        <td><%= rsvp.number %></td>
-        <td>
+        <td class="msg"><%= rsvp.names %></td>
+        <td class="msg"><%= rsvp.number %></td>
+        <td class="msg">
           <%= " Fri " if rsvp.friday %>
           <%= " Sat" if rsvp.saturday %>
           <%= " Sun" if rsvp.sunday %>
